@@ -27,4 +27,4 @@ console.log(!!false); // false
 console.log(!!!true); // false
 
 console.log(!!false && !false); // false
-console.log(!!true || !false); // false
+console.log(!!true || !false); // true
