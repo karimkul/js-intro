@@ -1,7 +1,8 @@
 // 1) problem
 
-var radius = 15;
-area = 3.14;
+var radius = 9;
+area = 3.14 * radius * radius;
+console.log(area); //254.34
 
 // 2) problem
 
@@ -13,11 +14,13 @@ Perimeter = 2 * (length + width);
 // 3) problem
 
 var degrees = 100;
-radians = degrees * (3.14 / 180);
-console.log(radians);
+var p = 3.14;
+radians = degrees * (p / 180);
+// console.log(radians); //1.7444444444444447
 
 // 4) problem
 
-var radius = 70;
-Perimeter = 3.14;
-console.log(Perimeter);
+var r = 70;
+var p = 3.14;
+var Perimeter = 2 * p * r;
+// console.log(Perimeter); // 439

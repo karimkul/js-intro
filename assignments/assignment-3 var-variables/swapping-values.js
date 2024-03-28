@@ -3,10 +3,10 @@
 var a = 11;
 var b = 22;
 
-// c = b;
-// b = a;
-// a = c;
-a += 11;
-b -= 11;
+// a += 11;
+// b -= 11;
 
+a = a + b;
+b = a - b;
+a = a - b;
 console.log(a, b);
