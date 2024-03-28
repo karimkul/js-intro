@@ -1,0 +1,40 @@
+1. Temperature Converter
+   Declare a variable fahrenheit and assign it a value representing a temperature in Fahrenheit. Convert this temperature to Celsius and assign the result to a variable celsius. The formula for conversion is C = (F - 32) \* (5/9). Log the Celsius temperature to the console.
+
+Repeat the process in reverse. Assign a Celsius temperature to celsius, convert it to Fahrenheit, and log the result. The formula for this conversion is F = C \* (9/5) + 32.
+
+2. Interest Calculator
+   Declare variables principal, rate, and time, assigning them appropriate values for an interest calculation (you can decide the values). Compute the simple interest with the formula Interest = (Principal _ Rate _ Time) / 100 and store it in a variable interest. Log the interest to the console.
+
+3. Swapping Values
+   Declare two variables, a and b, and assign them any two values of your choice. Write code to swap the values of a and b without using a third variable, then log a and b to confirm that their values have been swapped.
+
+Example:
+
+var a = 4 and var b = 5; After swapping, a should be equal to 5,and b should be equal to 4.
+
+4. Implementing Mathematical Formulas
+   Declare a variable radius and assign it a value. Calculate the area of a circle using the formula Area = πr² (you can use 3.14 for π), and log the area to the console.
+
+Declare variables length and width and assign them values. Calculate the perimeter of a rectangle using the formula Perimeter = 2 \* (Length + Width), and log the perimeter to the console.
+
+Declare a variable degrees and assign it a value representing an angle in degrees. Convert this angle to radians and assign the result to a variable radians. The formula for conversion is radians = degrees \* (π/180). Log the radians to the console.
+
+Declare a variable radius and assign it a value. Calculate the perimeter (circumference) of a circle using the formula Perimeter = 2πr, and log the perimeter to the console. Use 3.14 for π.
+
+5. Speed Converter
+   Declare a variable milesPerHour and assign it a value representing speed in miles per hour. Convert this speed to kilometers per hour and assign the result to a variable kilometersPerHour. The formula for conversion is km/h = mph \* 1.60934. Log the kilometers per hour to the console.
+
+6. Volume Converter
+   Assign a volume in liters to a variable liters, and convert this volume to gallons. Assign the result to a variable gallons. The formula for this conversion is gallons = liters \* 0.264172. Log the result in gallons to the console.
+
+7. Compound Interest Calculator
+   Declare variables principal, annualRate, and years, assigning them appropriate values for a compound interest calculation. Compute the compound interest with the formula A = P(1 + r/n)^(nt), where:
+
+P is the principal amount.
+
+r is the annual interest rate (decimal).
+
+n is the number of times interest is compounded per year.
+
+t is the time the money is invested for in years. Store the total amount after interest in a variable totalAmount and log it to the console. Note: You can assume n to be a fixed value like 4.
