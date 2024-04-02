@@ -11,4 +11,5 @@ var season =
 var animal = "My favorite animal is cat.";
 
 var result = `${name} ${age} ${city} ${profession} ${hobby} ${food} ${color} ${dreamTravel} ${season}`;
+
 console.log(result);
