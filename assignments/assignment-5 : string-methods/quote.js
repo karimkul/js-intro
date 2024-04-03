@@ -5,6 +5,7 @@ var part3 = "never falling, but in";
 var part4 = "rising every time";
 var part5 = "we fall.";
 var author = " - Nelson Mandela";
+
 var result = `${part1} ${part2} ${part3} ${part4} ${part5} ${author}`;
 console.log(result);
 
@@ -39,11 +40,12 @@ var result3 =
 console.log(result3);
 
 // 4 Using assignment operator
-var result4 = "The greatest glory in";
-result4 += " living lies not in";
-result4 += " never falling, but in";
-result4 += " rising every time";
-result4 += " we fall.";
-result4 += " - Nelson Mandela";
+var result4;
+var result4 = part1;
+result4 += " " + part2;
+result4 += " " + part3;
+result4 += " " + part4;
+result4 += " " + part5;
+result4 += " " + author;
 
 console.log(result4);
