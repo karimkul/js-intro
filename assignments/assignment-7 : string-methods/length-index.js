@@ -29,12 +29,12 @@ console.log(greeting[1]); //e
 console.log(greeting[2]); //l
 
 // accessing  the  last and  the one before characters of the greeting string
-//1
+//1 with index
 console.log(greeting[11]); //d
 console.log(greeting[12]); //!
-//2
+//2 with index[.length]
 console.log(greeting[greeting.length - 2]); //d
 console.log(greeting[greeting.length - 1]); //!
-//3
+//3 with slice
 console.log(greeting.slice(11, 12)); //d
 console.log(greeting.slice(-1)); //!
