@@ -32,5 +32,5 @@ console.log(greeting[2]); //l
 console.log(greeting[11]); //d
 console.log(greeting[12]); //!
 
-console.log(greeting.slice(-2)); //!
+console.log(greeting.slice(11, 12)); //d
 console.log(greeting.slice(-1)); //!
