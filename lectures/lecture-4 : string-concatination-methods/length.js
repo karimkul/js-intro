@@ -3,5 +3,6 @@
 var bootcamp = "Bootcamp";
 console.log(bootcamp.length);
 
-var exmpl = "adcadcegrwgjwnrflwejn qecclj";
+var exmpl = "adcadcegrwgjwnrflwejn qecclj cewdkjfbcksdajc";
 console.log(exmpl.length);
+console.log(exmpl[43]);
