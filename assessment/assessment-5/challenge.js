@@ -1,12 +1,10 @@
 // 1. Challenge
 var generatedNum = Math.floor(Math.random() * (15 + 1)) + 15;
 var generatedNum2 = Math.floor(Math.random() * (15 + 1)) + 15;
-var number1 = generatedNum;
-var number2 = generatedNum2;
 
-if (number1 === number2) {
+if (generatedNum === generatedNum2) {
     console.log("The numbers are equal.");
-} else if (number1 > number2) {
+} else if (generatedNum > generatedNum2) {
     console.log("The first number is greater.");
 } else {
     console.log("The second number is greater than the first one.");
@@ -15,28 +13,37 @@ if (number1 === number2) {
 // 2. ???????????????
 var string1 = "examplestringonegenerated";
 var string2 = "secondexamplestringgenerated";
+var alphabet = "abcdefghijklmnnopqrstuvwxyz";
+var targetCharacter = Math.floor(Math.random() * alphabet.length);
+var targetCharacterOfLatter = alphabet[targetCharacter];
+var count1 = string1.replace(targetCharacterOfLatter, "");
+var count2 = string1.replace(targetCharacterOfLatter, "");
+console.log(count2);
 
 // 3. Challenge
 var randomNumber = Math.ceil(Math.random() * 1000);
 console.log(randomNumber);
 
-if (randomNumber % 3 === 0) {
+if (randomNumber % 3 === 0 && randomNumber % 5 !== 0) {
     console.log("Fizz");
 } else if (randomNumber % 5 === 0) {
     console.log("Buzz");
 } else if (randomNumber % 3 === 0 && randomNumber % 5 === 0) {
     console.log("FizzBuzz");
+} else {
+    console.log("Boom");
 }
 
 // 4. Challenge
 var replaceString =
     "I find myself reflecting on past adventures, realizing that my greatest discoveries were often right at home, hidden in plain sight, waiting to be appreciated, and truly making them mine.";
-var replaceI = replaceString.replaceAll("I", "We");
-var replaceMy = replaceI.replaceAll("my", "our");
-var replaceMyself = replaceMy.replaceAll("myself", "ourselves");
-var replaceWe = replaceMyself.replaceAll("mine", "ours");
-var resultString = replaceWe;
-console.log(resultString);
+var replacedStringResult;
+replacedStringResult = replaceString.replaceAll("I", "We");
+replacedStringResult = replacedStringResult.replaceAll("my", "our");
+replacedStringResult = replacedStringResult.replaceAll("myself", "ourselves");
+replacedStringResult = replacedStringResult.replaceAll("mine", "ours");
+
+console.log(replacedStringResult);
 
 // 5. Challenge
 var mainString =
