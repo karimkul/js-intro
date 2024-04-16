@@ -1,33 +1,34 @@
 // 1. Problem
 function isOdd(number) {
-    var checkOdd = number % 3 === 0;
+    var checkOdd = number % 2 !== 0;
     console.log(`Is it odd number? : ${checkOdd}`);
 }
 isOdd(15); // true
-isOdd(5); // false
+isOdd(6); // false
 
 // 2. Problem
 function isEven(number) {
     var checkEven = number % 2 === 0;
     console.log(`Is it even number? : ${checkEven}`);
 }
-isEven(2); // true
-console.log("______________________________");
+isEven(22); // true
+isEven(11); // false
 
-// 3. Problem  ??????
+// 3. Problem
 function isIncludes(mainString, targetString) {
-    var isIncludesString = mainString.includes(targetString);
+    var upperCasedTargetString = targetString.toLowerCase();
+    var isIncludesString = mainString.includes(upperCasedTargetString);
 
     console.log(isIncludesString);
 }
-isIncludes("Hello world", "WORLD");
-isIncludes("Look here", "here");
+isIncludes("Hello world", "WORLD"); //true
+isIncludes("Look here", "there"); //false
 
 // 4. Problem
 function minValue(number1, number2) {
-    if (number1 > number2) {
+    if (number1 < number2) {
         console.log(number1);
-    } else if (number1 < number2) {
+    } else if (number1 > number2) {
         console.log(number2);
     } else if (number1 === number2) {
         console.log(number1, number2);
@@ -59,13 +60,16 @@ function power(base, exponent) {
 power(10, 3); //1000
 power(2, 5); //32
 power(5, 0); //10987
-console.log("______________________________");
 
 // 7. Problem
-// function isProductGreater(num1,num2,num3){
-//     var sum =
-// }
-console.log("______________________________");
+function isProductGreater(num1, num2, num3) {
+    var product = num1 * num2 * num3;
+    var sum = num1 + num2 + num3;
+    var result = product > sum;
+    console.log(result);
+}
+isProductGreater(1, 2, 3);
+isProductGreater(5, 6, 2);
 
 // 8. Problem
 function swapFirstAndLastChars(string) {
@@ -80,10 +84,13 @@ swapFirstAndLastChars("hello"); //oellh
 swapFirstAndLastChars("abcd"); //dbca
 console.log("______________________________");
 
-// 9. Problem ??
+// 9. Problem
 function firstHalf(string) {
-    var firstHalfOfString = string.slice(0, 2);
-    console.log(firstHalfOfString);
+    var stringLength = string.length;
+    var stringLengthDevided = stringLength / 2;
+    var stringFloored = Math.floor(stringLengthDevided);
+    var stringSliced = string.slice(0, stringFloored);
+    console.log(stringSliced);
 }
 firstHalf("hello"); // "he"
 firstHalf("four"); // "fo"
@@ -93,7 +100,11 @@ function getInitials(fullName) {
     var getFirstLatter = fullName[0];
     var getSecondLatterInd = fullName.indexOf(" ");
     var getSecondLatter = fullName[getSecondLatterInd + 1];
-    var getThirdLatter = fullName.slice(-1, -4);
-    console.log(getFirstLatter, getSecondLatter, getThirdLatter);
+    var fullNameWithoutFirstSpace = fullName.replace(" ", "");
+    var getThirdLatterInd = fullNameWithoutFirstSpace.indexOf(" ");
+    var getThirdLatter = fullNameWithoutFirstSpace[getThirdLatterInd + 1];
+    var getInitialsResult = getFirstLatter + getSecondLatter + getThirdLatter;
+    console.log(getInitialsResult);
 }
-getInitials("John Fitzgerald Kennedy");
+getInitials("John Fitzgerald Kennedy"); // "JFK"
+getInitials("Martin Luther King"); // "MLK"
