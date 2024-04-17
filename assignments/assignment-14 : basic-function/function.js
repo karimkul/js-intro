@@ -16,8 +16,8 @@ isEven(11); // false
 
 // 3. Problem
 function isIncludes(mainString, targetString) {
-    var upperCasedTargetString = targetString.toLowerCase();
-    var isIncludesString = mainString.includes(upperCasedTargetString);
+    var lowerCasedTargetString = targetString.toLowerCase();
+    var isIncludesString = mainString.includes(lowerCasedTargetString);
 
     console.log(isIncludesString);
 }
@@ -86,25 +86,21 @@ console.log("______________________________");
 
 // 9. Problem
 function firstHalf(string) {
-    var stringLength = string.length;
-    var stringLengthDevided = stringLength / 2;
-    var stringFloored = Math.floor(stringLengthDevided);
-    var stringSliced = string.slice(0, stringFloored);
-    console.log(stringSliced);
+    var halfIdx = Math.floor(string.length / 2);
+    console.log(string.slice(0, halfIdx));
 }
 firstHalf("hello"); // "he"
 firstHalf("four"); // "fo"
 
 // 10. Problem
 function getInitials(fullName) {
-    var getFirstLatter = fullName[0];
-    var getSecondLatterInd = fullName.indexOf(" ");
-    var getSecondLatter = fullName[getSecondLatterInd + 1];
-    var fullNameWithoutFirstSpace = fullName.replace(" ", "");
-    var getThirdLatterInd = fullNameWithoutFirstSpace.indexOf(" ");
-    var getThirdLatter = fullNameWithoutFirstSpace[getThirdLatterInd + 1];
-    var getInitialsResult = getFirstLatter + getSecondLatter + getThirdLatter;
-    console.log(getInitialsResult);
+    var firstSpaceIdx = fullName.indexOf(" ") + 1;
+    var lastSpaceIdx = fullName.lastIndexOf(" ") + 1;
+    var firstInitial = fullName[0];
+    var secondInitial = fullName[firstSpaceIdx];
+    var thirdInitial = fullName[lastSpaceIdx];
+    var initials = firstInitial + secondInitial + thirdInitial;
+    console.log(initials);
 }
 getInitials("John Fitzgerald Kennedy"); // "JFK"
 getInitials("Martin Luther King"); // "MLK"
