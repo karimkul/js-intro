@@ -62,3 +62,25 @@ console.log(longestString("space here", "hello", "world")); // "space here"
 console.log(longestString("wussap", "computer", "telecomunication")); // "telecomunication"
 
 // 5. shortestString
+function shortestString(string1, string2, string3) {
+    var removedCharacterStr1 = string1.replace("?", "");
+    var removedCharacterStr2 = string2.replace("!", "");
+    var removedCharacterStr3 = string3.replace(".", "");
+    if (
+        removedCharacterStr1.length < removedCharacterStr2.length &&
+        removedCharacterStr1.length < removedCharacterStr3.length
+    ) {
+        return removedCharacterStr1;
+    } else if (
+        removedCharacterStr2.length < removedCharacterStr1.length &&
+        removedCharacterStr2.length < removedCharacterStr3.length
+    ) {
+        return removedCharacterStr2;
+    } else {
+        return removedCharacterStr3;
+    }
+}
+
+console.log(shortestString("hello?", "wo!rld", "yes.")); // Outputs: "yes"
+console.log(shortestString("how are you?", "I am fine!", "What about you?")); // Outputs: "I am fine"
+console.log(shortestString("this is a test?", "short!", "even shorter.")); // Outputs: "short"
