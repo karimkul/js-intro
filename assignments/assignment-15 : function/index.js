@@ -1,23 +1,16 @@
+function isEven(num) {
+    return num % 2 === 0;
+}
+
 // 1. sumUp
 function sumUp(num1, num2, num3, num4, num5) {
-    var total = 0;
-    if (num1 % 2 === 0) {
-        total += num1;
-    }
-    if (num2 % 2 === 0) {
-        total += num2;
-    }
-    if (num3 % 2 === 0) {
-        total += num3;
-    }
-    if (num4 % 2 === 0) {
-        total += num4;
-    }
-    if (num5 % 2 === 0) {
-        total += num5;
-    }
-
-    return total;
+    var sum = 0;
+    if (isEven(num1)) sum += num1;
+    if (isEven(num2)) sum += num2;
+    if (isEven(num3)) sum += num3;
+    if (isEven(num4)) sum += num4;
+    if (isEven(num5)) sum += sum;
+    return sum;
 }
 console.log(sumUp(2, 3, 4, 1, 2)); //8
 console.log(sumUp(10, 3, 10, 1, 10)); //30
@@ -50,37 +43,28 @@ console.log(min(51, 14, 11)); //11
 
 // 4. longestString
 function longestString(str1, str2, str3) {
-    if (str1.length > str2.length && str1.length > str3.length) {
-        return str1;
-    } else if (str2.length > str1.length && str2.length > str3.length) {
-        return str2;
-    } else {
-        return str3;
-    }
+    var cleanStr1 = str1.replaceAll(" ", "");
+    var cleanStr2 = str2.replaceAll(" ", "");
+    var cleanStr3 = str3.replaceAll(" ", "");
+    var maxLength = max(cleanStr1.length, cleanStr2.length, cleanStr3.length);
+    if (maxLength === cleanStr1) return cleanStr1;
+    if (maxLength === cleanStr2) return cleanStr2;
+    return cleanStr3;
 }
 console.log(longestString("space here", "hello", "world")); // "space here"
 console.log(longestString("wussap", "computer", "telecomunication")); // "telecomunication"
 
 // 5. shortestString
 function shortestString(string1, string2, string3) {
-    var removedCharacterStr1 = string1.replace("?", "");
-    var removedCharacterStr2 = string2.replace("!", "");
-    var removedCharacterStr3 = string3.replace(".", "");
-    if (
-        removedCharacterStr1.length < removedCharacterStr2.length &&
-        removedCharacterStr1.length < removedCharacterStr3.length
-    ) {
-        return removedCharacterStr1;
-    } else if (
-        removedCharacterStr2.length < removedCharacterStr1.length &&
-        removedCharacterStr2.length < removedCharacterStr3.length
-    ) {
-        return removedCharacterStr2;
-    } else {
-        return removedCharacterStr3;
-    }
+    var cleanStr1 = string1.replace("?", "");
+    var cleanStr2 = string2.replace("!", "");
+    var cleanStr3 = string3.replace(".", "");
+    var minLength = min(cleanStr1.length, cleanStr2.length, cleanStr3.length);
+    if (minLength === cleanStr1.length) return string1;
+    if (minLength === cleanStr2.length) return string1;
+    return cleanStr3;
 }
 
 console.log(shortestString("hello?", "wo!rld", "yes.")); // Outputs: "yes"
 console.log(shortestString("how are you?", "I am fine!", "What about you?")); // Outputs: "I am fine"
-console.log(shortestString("this is a test?", "short!", "even shorter.")); // Outputs: "short"
+console.log(shortestString("this is a test?", "short!", "even shorter.")); // Outputs: "short!"
