@@ -11,14 +11,37 @@ if (generatedNum === generatedNum2) {
 }
 
 // 2. ???????????????
+var alphabet = "abcdefghijklmnopqrstuvwxyz";
+var randomIdx = Math.floor(Math.random() * alphabet.length);
+var targetCharacter = alphabet[randomIdx];
+
 var string1 = "examplestringonegenerated";
 var string2 = "secondexamplestringgenerated";
-var alphabet = "abcdefghijklmnnopqrstuvwxyz";
-var targetCharacter = Math.floor(Math.random() * alphabet.length);
-var targetCharacterOfLatter = alphabet[targetCharacter];
-var count1 = string1.replace(targetCharacterOfLatter, "");
-var count2 = string1.replace(targetCharacterOfLatter, "");
-console.log(count2);
+
+var originalLength1 = string1.length;
+var originalLength2 = string2.length;
+
+var newString1 = string1.replaceAll(targetCharacterOfLatter, "");
+var newString2 = string1.replaceAll(targetCharacterOfLatter, "");
+
+var count1 = originalLength1 - newString1.length;
+var count2 = originalLength2 - newString2.length;
+
+if (count1 === count2 && count1 > 0) {
+    console.log(
+        "Number of " + targetCharacter + " is the same in both strings."
+    );
+} else if (count1 > count2) {
+    console.log(
+        "Number of " +
+            targetCharacter +
+            " in the first string is greater than the second one."
+    );
+} else if (count2 > count1) {
+    console.log("The second one is greater.");
+} else {
+    console.log("Character does not exist in each string.");
+}
 
 // 3. Challenge
 var randomNumber = Math.ceil(Math.random() * 1000);
@@ -26,7 +49,7 @@ console.log(randomNumber);
 
 if (randomNumber % 3 === 0 && randomNumber % 5 !== 0) {
     console.log("Fizz");
-} else if (randomNumber % 5 === 0) {
+} else if (randomNumber % 5 === 0 && randomNumber % 3 !== 0) {
     console.log("Buzz");
 } else if (randomNumber % 3 === 0 && randomNumber % 5 === 0) {
     console.log("FizzBuzz");
@@ -50,12 +73,11 @@ var mainString =
     "Exploring the vast universe of code can lead to unexpected discoveries.";
 var targetString = "universe";
 var includesString = mainString.includes(targetString);
-console.log(includesString);
 
-if (mainString.includes(targetString)) {
-    console.log("[targetString] string is in [mainString].");
-} else if (!mainString.includes(targetString)) {
-    console.log("[targetString] is not in this [mainString].");
+if (includesString !== -1) {
+    console.log(targetString + " string is in " + mainString);
+} else {
+    console.log(targetString + " is not in this " + mainString);
 }
 
 // 6. Challenge
