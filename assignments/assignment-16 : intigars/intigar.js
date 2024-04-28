@@ -1,7 +1,7 @@
 // 1. sumStrings
 function sumStrings(str1, str2) {
     var resultNum = parseFloat(str1) + parseFloat(str2);
-    return resultNum;
+    // return resultNum;
 }
 // console.log(sumStrings("123", "456"));
 // console.log(sumStrings("101", "899"));
@@ -22,50 +22,47 @@ function sumDigits(strIntiger) {
     if (strIntiger[3] !== 0) {
         sum += parseFloat(strIntiger[3]);
     }
-    return sum;
+    // return sum;
 }
 
 // console.log(sumDigits("1234")); // Outputs: 10
 // console.log(sumDigits("9009")); // Outputs: 18
 // console.log(sumDigits("1111")); // Outputs: 4
 
-// 3. multiplyRandomPositions ???????????
-function multiplyRandomPositions(digitNum1) {
-    var randomIntiger1 = Math.floor(Math.random() * digitNum1.length - 1);
-    // console.log(randomIntiger1);
-    var randomIntiger2 = Math.floor(Math.random() * digitNum1.length - 1);
-    // console.log(randomIntiger2);
+// 3. multiplyRandomPositions
+function multiplyRandomPositions(digitNum) {
+    var stringIdx1 = Math.floor(Math.random() * digitNum.length);
+    var stringIdx2 = Math.floor(Math.random() * digitNum.length);
 
-    var indexOfStr1 = digitNum1[randomIntiger1];
-    // console.log(indexOfStr1);
-    var indexOfStr2 = digitNum1[randomIntiger2];
-    // console.log(indexOfStr1);
+    var randomNum1 = digitNum[stringIdx1];
+    var randomNum2 = digitNum[stringIdx2];
+    var result = parseFloat(randomNum1) * parseFloat(randomNum2);
 
-    var result12 = parseFloat(indexOfStr1) * parseFloat(indexOfStr2);
-
-    return result12;
+    return result;
 }
 // console.log(multiplyRandomPositions("92454"));
+// console.log(multiplyRandomPositions("67890"));
+// console.log(multiplyRandomPositions("98765"));
 
 // 4. multiplyHalves   ????????
 function multiplyHalves(strIntiger) {
     var slicedIntiger = strIntiger / 2;
-    console.log(slicedIntiger);
+    // console.log(slicedIntiger);
 }
 
-multiplyHalves("1234"); // Outputs: 12 * 34 = 408
-multiplyHalves("56789"); // Outputs: 56 * 89 = 4984
-multiplyHalves("24680"); // Outputs: 246 * 80 = 19680
+// multiplyHalves("1234"); // Outputs: 12 * 34 = 408
+// multiplyHalves("56789"); // Outputs: 56 * 89 = 4984
+// multiplyHalves("24680"); // Outputs: 246 * 80 = 19680
 
 // 5. isOddStringInteger   ???????
 function isOddStringInteger(strIntiger) {
-    var lengthOfStrOdd = strIntiger.length % 2 !== 0;
-    return lengthOfStrOdd;
+    var isOddNum = strIntiger.length % 2 !== 0;
+    return isOddNum;
 }
 
-// console.log(isOddStringInteger("123")); // Outputs: true
-// console.log(isOddStringInteger("2468")); // Outputs: false
-// console.log(isOddStringInteger("1357")); // Outputs: true
+console.log(isOddStringInteger("123")); // Outputs: true
+console.log(isOddStringInteger("2468")); // Outputs: false
+console.log(isOddStringInteger("1357")); // Outputs: true
 
 // 6. roundAndConvert
 function roundAndConvert(num1) {
@@ -77,8 +74,15 @@ function roundAndConvert(num1) {
 // console.log(roundAndConvert(7.1)); // Outputs: "7"
 // console.log(roundAndConvert(5.499)); // Outputs: "5"
 
-// 7. formatCurrency  ?????????
-function formatCurrency(num) {}
+// 7. formatCurrency
+function formatCurrency(num) {
+    var fixedNum = num.toFixed(2);
+    var totalCurrency = "$" + fixedNum;
+    return totalCurrency;
+}
+console.log(formatCurrency(1500));
+console.log(formatCurrency(15.378));
+console.log(formatCurrency(0.99));
 
 // formatCurrency(1500); // Outputs: "$1500.00"
 // formatCurrency(15.378); // Outputs: "$15.38"
@@ -88,8 +92,6 @@ function formatCurrency(num) {}
 
 // 9. integerToString
 function integerToString(num) {
-    // var convertToStr = num.toString();
-    // return convertToStr;
     return num.toString();
 }
 
@@ -113,7 +115,22 @@ function convertToFahrenheit(num) {
 // 12. addOrdinalSuffix ??????????????
 function addOrdinalSuffix(num) {}
 
-// 13. addTimeSuffix
+// 13. addTimeSuffix ??????????????
+function addTimeSuffix(num) {
+    var lastCharIdx = num.length - 1;
+    var lastChar = num[lastCharIdx];
+    if (lastChar === 1) return num + "st";
+    if (lastCharIdx === 2) return num + "nd";
+    if (lastCharIdx === 3) return num + "rd";
+    else {
+        return num + "th";
+    }
+}
+
+// console.log(addOrdinalSuffix(1)); // Outputs: "1st"
+// addOrdinalSuffix(22); // Outputs: "22nd"
+// addOrdinalSuffix(43); // Outputs: "43rd"
+// addOrdinalSuffix(104); // Outputs: "104th"
 
 // 14. formatAsPhone ?????????
 function formatAsPhone(num) {
