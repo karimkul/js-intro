@@ -88,7 +88,7 @@ console.log(formatCurrency(0.99));
 // formatCurrency(15.378); // Outputs: "$15.38"
 // formatCurrency(0.99); // Outputs: "$0.99"
 
-// 8. extractDecimal
+// 8. extractDecimal ????????????????
 
 // 9. integerToString
 function integerToString(num) {
