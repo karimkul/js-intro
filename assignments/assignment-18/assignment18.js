@@ -40,7 +40,8 @@ function sumOfSquares(n) {
 // console.log(sumOfSquares(5)); // Outputs: 55 (1^2 + 2^2 + 3^2 + 4^2 + 5^2)
 // console.log(sumOfSquares(2)); // Outputs: 5 (1^2 + 2^2)
 
-// 4. countPerfectSquares
+// 4. countPerfectSquares ?????????
+
 // 5. countDigitsSumDivisibleByThree
 function countDigitsSumDivisibleByThree(num1, num2) {
     var result = 0;
@@ -49,4 +50,4 @@ function countDigitsSumDivisibleByThree(num1, num2) {
     }
     return result;
 }
-console.log(countDigitsSumDivisibleByThree(7, 12)); // Outputs: 2
+// console.log(countDigitsSumDivisibleByThree(7, 12)); // Outputs: 2
