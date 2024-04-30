@@ -28,7 +28,7 @@ function isPrime(num) {
 // listPrimes(1); // Should return ""
 // listPrimes(2); // Should return "2"
 
-// 3. Challenge ??????????????????
+// 3. Challenge ?????????????????
 // function generateRandomString16() {
 //     var strChars =
 //         "ABCDEFGHIJKLMNOPQRSTUVWabcdefghijklmnopqrstuvwxyz1234567890!@#$%^&*()_+~:;.,/|[]{}";
