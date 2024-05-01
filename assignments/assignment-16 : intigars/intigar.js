@@ -3,9 +3,9 @@ function sumStrings(str1, str2) {
     var resultNum = parseFloat(str1) + parseFloat(str2);
     return resultNum;
 }
-console.log(sumStrings("123", "456"));
-console.log(sumStrings("101", "899"));
-console.log(sumStrings("333", "666"));
+// console.log(sumStrings("123", "456"));
+// console.log(sumStrings("101", "899"));
+// console.log(sumStrings("333", "666"));
 
 // 2.sumDigits
 function sumDigits(strIntiger) {
@@ -25,9 +25,9 @@ function sumDigits(strIntiger) {
     return sum;
 }
 
-console.log(sumDigits("1234")); // Outputs: 10
-console.log(sumDigits("9009")); // Outputs: 18
-console.log(sumDigits("1111")); // Outputs: 4
+// console.log(sumDigits("1234")); // Outputs: 10
+// console.log(sumDigits("9009")); // Outputs: 18
+// console.log(sumDigits("1111")); // Outputs: 4
 
 // 3. multiplyRandomPositions
 function multiplyRandomPositions(digitNum) {
@@ -40,18 +40,14 @@ function multiplyRandomPositions(digitNum) {
 
     return result;
 }
-console.log(multiplyRandomPositions("92454"));
-console.log(multiplyRandomPositions("67890"));
-console.log(multiplyRandomPositions("98765"));
+// console.log(multiplyRandomPositions("92454"));
+// console.log(multiplyRandomPositions("67890"));
+// console.log(multiplyRandomPositions("98765"));
 
 // 4. multiplyHalves         ?????????????
-// function multiplyHalves(strIntiger) {
-//     var slicedIntiger = strIntiger / 2;
-//     // console.log(slicedIntiger);
-// }
-// multiplyHalves("1234"); // Outputs: 12 * 34 = 408
-// multiplyHalves("56789"); // Outputs: 56 * 89 = 4984
-// multiplyHalves("24680"); // Outputs: 246 * 80 = 19680
+// console.log(multiplyHalves("1234")); // Outputs: 12 * 34 = 408
+// console.log(multiplyHalves("56789")); // Outputs: 56 * 89 = 4984
+// console.log(multiplyHalves("24680")); // Outputs: 246 * 80 = 19680
 
 // 5. isOddStringInteger
 function isOddStringInteger(strIntiger) {
@@ -62,9 +58,9 @@ function isOddStringInteger(strIntiger) {
     }
 }
 
-console.log(isOddStringInteger("123")); // Outputs: true
-console.log(isOddStringInteger("2468")); // Outputs: false
-console.log(isOddStringInteger("1357")); // Outputs: true
+// console.log(isOddStringInteger("123")); // Outputs: true
+// console.log(isOddStringInteger("2468")); // Outputs: false
+// console.log(isOddStringInteger("1357")); // Outputs: true
 
 // 6. roundAndConvert
 function roundAndConvert(num1) {
@@ -72,9 +68,9 @@ function roundAndConvert(num1) {
     return roundednum1.toString();
 }
 
-console.log(roundAndConvert(3.56)); // Outputs: "4"
-console.log(roundAndConvert(7.1)); // Outputs: "7"
-console.log(roundAndConvert(5.499)); // Outputs: "5"
+// console.log(roundAndConvert(3.56)); // Outputs: "4"
+// console.log(roundAndConvert(7.1)); // Outputs: "7"
+// console.log(roundAndConvert(5.499)); // Outputs: "5"
 
 // 7. formatCurrency
 function formatCurrency(num) {
@@ -82,9 +78,9 @@ function formatCurrency(num) {
     var totalCurrency = "$" + fixedNum;
     return totalCurrency;
 }
-console.log(formatCurrency(1500)); // Outputs: "$1500.00"
-console.log(formatCurrency(15.378)); // Outputs: "$15.38"
-console.log(formatCurrency(0.99)); // Outputs: "$0.99"
+// console.log(formatCurrency(1500)); // Outputs: "$1500.00"
+// console.log(formatCurrency(15.378)); // Outputs: "$15.38"
+// console.log(formatCurrency(0.99)); // Outputs: "$0.99"
 
 // 8. extractDecimal ????????????????
 
@@ -93,11 +89,11 @@ function integerToString(num) {
     return num.toString();
 }
 
-console.log(integerToString(123)); // Outputs: "123"
-console.log(integerToString(-456)); // Outputs: "-456"
-console.log(integerToString(7890)); // Outputs: "7890"
+// console.log(integerToString(123)); // Outputs: "123"
+// console.log(integerToString(-456)); // Outputs: "-456"
+// console.log(integerToString(7890)); // Outputs: "7890"
 
-// 10. displayAsPercentage ????????????????????
+// 10. displayAsPercentage
 
 // 11. convertToFahrenheit
 function convertToFahrenheit(num) {
@@ -105,9 +101,9 @@ function convertToFahrenheit(num) {
     return fahrenheitNum.toString() + "°" + "F";
 }
 
-console.log(convertToFahrenheit(0)); // Outputs: "32°F"
-console.log(convertToFahrenheit(-20)); // Outputs: "-4°F"
-console.log(convertToFahrenheit(28)); // Outputs: "82.4°F"
+// console.log(convertToFahrenheit(0)); // Outputs: "32°F"
+// console.log(convertToFahrenheit(-20)); // Outputs: "-4°F"
+// console.log(convertToFahrenheit(28)); // Outputs: "82.4°F"
 
 // 12. addOrdinalSuffix ??????????????
 // function addOrdinalSuffix(num) {}
@@ -135,8 +131,8 @@ function formatAsPhone(num) {
     var thirdSlicedPart = num.toString().slice(6, 10);
     return `(${firstSlicedPart}) ${secondSlicedPart}-${thirdSlicedPart}`;
 }
-console.log(formatAsPhone(1234567890)); // Outputs: "(123) 456-7890"
-console.log(formatAsPhone(9876543210)); // Outputs: "(987) 654-3210"
+// console.log(formatAsPhone(1234567890)); // Outputs: "(123) 456-7890"
+// console.log(formatAsPhone(9876543210)); // Outputs: "(987) 654-3210"
 
 // 15. convertToCelsius
 function convertToCelsius(num) {
@@ -145,6 +141,6 @@ function convertToCelsius(num) {
     return roundedCelsius.toString() + "." + "0" + "°" + "C";
 }
 
-console.log(convertToCelsius(32)); // Outputs: "0.0°C"
-console.log(convertToCelsius(-4)); // Outputs: "-20.0°C"
-console.log(convertToCelsius(82.4)); // Outputs: "28.0°C"
+// console.log(convertToCelsius(32)); // Outputs: "0.0°C"
+// console.log(convertToCelsius(-4)); // Outputs: "-20.0°C"
+// console.log(convertToCelsius(82.4)); // Outputs: "28.0°C"
