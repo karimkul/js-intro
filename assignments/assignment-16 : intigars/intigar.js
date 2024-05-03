@@ -44,7 +44,21 @@ function multiplyRandomPositions(digitNum) {
 // console.log(multiplyRandomPositions("67890"));
 // console.log(multiplyRandomPositions("98765"));
 
-// 4. multiplyHalves         ?????????????
+// 4. multiplyHalves ??
+function multiplyHalves(str) {
+    var evenLengthFirstHalf = parseInt(str.slice(0, 2));
+    var evenLengthSecondHalf = parseInt(str.slice(2));
+
+    var oddLengthFirstHalf = parseInt(str.slice(0, 2));
+    var oddLengthSecondHalf = parseInt(str.slice(3));
+
+    if (str % 2 === 0) {
+        return evenLengthFirstHalf * evenLengthSecondHalf;
+    }
+    if (str % 2 !== 0) {
+        return oddLengthFirstHalf * oddLengthSecondHalf;
+    }
+}
 // console.log(multiplyHalves("1234")); // Outputs: 12 * 34 = 408
 // console.log(multiplyHalves("56789")); // Outputs: 56 * 89 = 4984
 // console.log(multiplyHalves("24680")); // Outputs: 246 * 80 = 19680
@@ -94,7 +108,6 @@ function integerToString(num) {
 // console.log(integerToString(7890)); // Outputs: "7890"
 
 // 10. displayAsPercentage
-
 // 11. convertToFahrenheit
 function convertToFahrenheit(num) {
     var fahrenheitNum = num * (9 / 5) + 32;
@@ -106,9 +119,6 @@ function convertToFahrenheit(num) {
 // console.log(convertToFahrenheit(28)); // Outputs: "82.4°F"
 
 // 12. addOrdinalSuffix ??????????????
-// function addOrdinalSuffix(num) {}
-
-// 13. addTimeSuffix ??????????????
 // function addTimeSuffix(num) {
 //     var lastCharIdx = num.length - 1;
 //     var lastChar = num[lastCharIdx];
@@ -123,6 +133,22 @@ function convertToFahrenheit(num) {
 // addOrdinalSuffix(22); // Outputs: "22nd"
 // addOrdinalSuffix(43); // Outputs: "43rd"
 // addOrdinalSuffix(104); // Outputs: "104th"
+
+// 13. addTimeSuffix
+function addTimeSuffix(hour) {
+    var convertHourStr = hour.toString();
+    if (hour < 12) {
+        return convertHourStr + " AM";
+    }
+    if (hour >= 12) {
+        return convertHourStr + " PM";
+    }
+}
+
+// console.log(addTimeSuffix(3)); // Outputs: "3AM"
+// console.log(addTimeSuffix(15)); // Outputs: "3PM"
+// console.log(addTimeSuffix(0)); // Outputs: "12AM"  ????????????
+// console.log(addTimeSuffix(12)); // Outputs: "12PM"
 
 // 14. formatAsPhone
 function formatAsPhone(num) {
