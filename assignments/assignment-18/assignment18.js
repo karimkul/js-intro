@@ -43,7 +43,7 @@ console.log(sumOfSquares(3)); // Outputs: 14 (1^2 + 2^2 + 3^2)
 console.log(sumOfSquares(5)); // Outputs: 55 (1^2 + 2^2 + 3^2 + 4^2 + 5^2)
 console.log(sumOfSquares(2)); // Outputs: 5 (1^2 + 2^2)
 
-// 4. countPerfectSquares
+// 4. countPerfectSquares ???????????
 function countPerfectSquares(num1, num2) {
     var cnt = 0;
     for (var i = num1; i <= num2; i++)
