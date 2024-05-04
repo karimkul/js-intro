@@ -51,9 +51,9 @@ function countPerfectSquares(num1, num2) {
             if (j * j === i) {
                 cnt++;
             }
-
     return cnt;
 }
+
 console.log(countPerfectSquares(1, 25)); // Outputs: 5 (1, 4, 9, 16, 25)
 console.log(countPerfectSquares(9, 49)); // Outputs: 5 (9, 16, 25, 36, 49)
 console.log(countPerfectSquares(30, 70)); // Outputs: 2 (36, 49)
