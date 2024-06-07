@@ -85,8 +85,8 @@ function convertToAlphabetPositions(str) {
     return result;
 }
 
-console.log(convertToAlphabetPositions("abc")); // Returns: "1 2 3"
-console.log(convertToAlphabetPositions("Hello World!")); // Returns: "8 5 12 12 15 23 15 18 12 4"
+// console.log(convertToAlphabetPositions("abc")); // Returns: "1 2 3"
+// console.log(convertToAlphabetPositions("Hello World!")); // Returns: "8 5 12 12 15 23 15 18 12 4"
 
 // 6. extractConsonants
 function extractConsonants(str) {
