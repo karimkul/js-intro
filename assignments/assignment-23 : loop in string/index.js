@@ -32,8 +32,8 @@ function areVowelsMore(str) {
     return volwels > consonants;
 }
 
-console.log(areVowelsMore("Hello")); // Returns: false (2 vowels, 3 consonants)
-console.log(areVowelsMore("Eerie")); // Returns: true (4 vowels, 1 consonant)
+// console.log(areVowelsMore("Hello")); // Returns: false (2 vowels, 3 consonants)
+// console.log(areVowelsMore("Eerie")); // Returns: true (4 vowels, 1 consonant)
 
 // 3. sumOfLetterPositions
 function sumOfLetterPositions(str) {
@@ -51,8 +51,8 @@ function sumOfLetterPositions(str) {
     return sum;
 }
 
-console.log(sumOfLetterPositions("abc")); // Returns: 6 (1 + 2 + 3)
-console.log(sumOfLetterPositions("Hello")); // Returns: 52 (8 + 5 + 12 + 12 + 15)
+// console.log(sumOfLetterPositions("abc")); // Returns: 6 (1 + 2 + 3)
+// console.log(sumOfLetterPositions("Hello")); // Returns: 52 (8 + 5 + 12 + 12 + 15)
 
 // 4. countMatchingChars
 function countMatchingChars(str1, str2) {
@@ -72,10 +72,21 @@ function countMatchingChars(str1, str2) {
 // console.log(countMatchingChars("abc", "def")); // Returns: 0 (no matching characters)
 
 // 5. convertToAlphabetPositions
-// function convertToAlphabetPositions(str) {}
+function convertToAlphabetPositions(str) {
+    let result = "";
+    let alphabet = "abcdefghijklmnopqrstuvwxyz";
 
-// convertToAlphabetPositions("abc"); // Returns: "1 2 3"
-// convertToAlphabetPositions("Hello World!"); // Returns: "8 5 12 12 15 23 15 18 12 4"
+    for (let i = 0; i < str.length; i++) {
+        let char = str[i].toLowerCase();
+        if (alphabet.includes(char)) {
+            result += alphabet.indexOf(char) + 1 + " ";
+        }
+    }
+    return result;
+}
+
+console.log(convertToAlphabetPositions("abc")); // Returns: "1 2 3"
+console.log(convertToAlphabetPositions("Hello World!")); // Returns: "8 5 12 12 15 23 15 18 12 4"
 
 // 6. extractConsonants
 function extractConsonants(str) {
@@ -97,7 +108,7 @@ function extractConsonants(str) {
 // console.log(extractConsonants("Hello, World!")); // Returns: ["H", "l", "l", "W", "r", "l", "d"]
 // console.log(extractConsonants("JavaScript")); // Returns: ["J", "v", "S", "c", "r", "p", "t"]
 
-// 7. countUppercaseLetters
+// 7. countUppercaseLetters  ?????
 function countUppercaseLetters(str) {
     let count = 0;
     for (var i = 0; i < str.length; i++) {
@@ -107,8 +118,8 @@ function countUppercaseLetters(str) {
     }
     return count;
 }
-console.log(countUppercaseLetters("Hello, World!")); // Returns: 2
-console.log(countUppercaseLetters("JavaScript")); // Returns: 2
+// console.log(countUppercaseLetters("Hello, World!")); // Returns: 2
+// console.log(countUppercaseLetters("JavaScript")); // Returns: 2
 
 // 8. hasConsecutiveSameLetters
 function hasConsecutiveSameLetters(str) {
@@ -120,8 +131,8 @@ function hasConsecutiveSameLetters(str) {
     return false;
 }
 
-hasConsecutiveSameLetters("hello"); // Returns: true (because of "ll")
-hasConsecutiveSameLetters("world"); // Returns: false
+// console.log(hasConsecutiveSameLetters("hello")); // Returns: true (because of "ll")
+// console.log(hasConsecutiveSameLetters("world")); // Returns: false
 // 10. countQueryCharacters
 
 function countQueryCharacters(str) {
