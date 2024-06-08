@@ -41,20 +41,18 @@ function singleDigitSum(arr) {
 
 // 4. binaryCounter  ?????
 function binaryCounter(arr) {
-    let numberOfZeroes = 0;
-    let numberOfOnes = 0;
-    // let result = [];
+    let result = [0, 0];
     for (let i = 0; i < arr.length; i++) {
         if (arr[i] === 0) {
-            numberOfZeroes++;
+            result[0]++;
         } else if (arr[i] === 1) {
-            numberOfOnes++;
+            result[1]++;
         }
     }
-    return [numberOfZeroes, numberOfOnes];
+    return result;
 }
 
-// console.log(binaryCounter([0, 1, 0, 1, 1, 0, 0, 1])); // Outputs [4, 4]
+console.log(binaryCounter([0, 1, 0, 1, 1, 0, 0, 1])); // Outputs [4, 4]
 
 // 5. uniqueStringFilter ????
 function uniqueStringFilter(arr) {}
@@ -111,7 +109,7 @@ function arrayElementMultiplier(arr) {
 // console.log(arrayElementMultiplier([1, 2, 3, 4, 5])); // Outputs [2, 4, 6, 8, 10]
 // console.log(arrayElementMultiplier([])); // Outputs []
 
-// 9. evenIndexSum  ???????????
+// 9. evenIndexSum
 function evenIndexSum(arr) {
     let sum = 0;
     for (let i = 0; i < arr.length; i += 2) {
@@ -120,7 +118,7 @@ function evenIndexSum(arr) {
     return sum;
 }
 
-console.log(evenIndexSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Outputs 30
+console.log(evenIndexSum([1, 2, 3, 4, 5, 6, 7, 8, 9, 10])); // Outputs 25
 console.log(evenIndexSum([10, 20, 30, 40, 50])); // Outputs 90
 console.log(evenIndexSum([])); // Outputs 0
 console.log(evenIndexSum([100])); // Outputs 100
