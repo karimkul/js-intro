@@ -87,7 +87,7 @@ function findMinMax(arr) {
 // console.log(findMinMax([])); // Returns: { min: undefined, max: undefined }
 // console.log(findMinMax([7])); // Returns: { min: 7, max: 7 }
 
-// 06. findMinNumber
+// 06. findLongestShortestString
 function findLongestShortestString(str) {
     if (str.length === 0) {
         return { longest: undefined, shortes: undefined };
@@ -105,11 +105,11 @@ function findLongestShortestString(str) {
     return { longest: longest, shortes: shortes };
 }
 
-// console.log(findLongestShortestString(["apple", "banana", "grape", "kiwi"])); // Returns: { longest: "banana", shortest: "kiwi" }
-// console.log(findLongestShortestString([])); // Returns: { longest: undefined, shortest: undefined }
-// console.log(findLongestShortestString(["circle", "point"])); // Returns: { longest: "circle", shortest: "point" }
+console.log(findLongestShortestString(["apple", "banana", "grape", "kiwi"])); // Returns: { longest: "banana", shortest: "kiwi" }
+console.log(findLongestShortestString([])); // Returns: { longest: undefined, shortest: undefined }
+console.log(findLongestShortestString(["circle", "point"])); // Returns: { longest: "circle", shortest: "point" }
 
-// 07. findMinNumber
+// 07. countCharactersIgnoreSpaces
 function countCharactersIgnoreSpaces(str) {}
 
 countCharactersIgnoreSpaces("hello world"); // Returns: { h: 1, e: 1, l: 3, o: 2, w: 1, r: 1, d: 1 }
