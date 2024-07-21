@@ -88,16 +88,16 @@ function checkPrime(num) {
 function allSubstrings(str) {
     let result = [];
     for (let i = 0; i < str.length; i++) {
-        for (let j = i + 1; j < str.length; j++) {
-            let substring = str.slice(i, i + j);
+        for (let j = i + 1; j <= str.length; j++) {
+            let substring = str.slice(i, j);
             result.push(substring);
         }
     }
     return result;
 }
 
-// console.log(allSubstrings("abc"));
-// // Expected output: ['a', 'ab', 'abc', 'b', 'bc', 'c']
+console.log(allSubstrings("abc"));
+// Expected output: ['a', 'ab', 'abc', 'b', 'bc', 'c']
 
-// console.log(allSubstrings("abcd"));
-// // Expected output: ['a', 'ab', 'abc', 'abcd', 'b', 'bc', 'bcd', 'c', 'cd', 'd']
+console.log(allSubstrings("abcd"));
+// Expected output: ['a', 'ab', 'abc', 'abcd', 'b', 'bc', 'bcd', 'c', 'cd', 'd']
