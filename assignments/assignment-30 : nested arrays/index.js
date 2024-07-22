@@ -15,16 +15,16 @@ function findMaxNumber(arr) {
     return maxNumber;
 }
 
-console.log(
-    findMaxNumber([
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ])
-);
+// console.log(
+//     findMaxNumber([
+//         [1, 2, 3],
+//         [4, 5, 6],
+//         [7, 8, 9]
+//     ])
+// );
 // Expected output: 9
 
-// 2. countCharacters
+// 2. countCharacters ????????
 function countCharacters(arr) {
     let countA = 0;
     let countB = 0;
@@ -48,12 +48,12 @@ function countCharacters(arr) {
     return { a: countA, b: countB, c: countC, d: countD };
 }
 
-console.log(
-    countCharacters([
-        ["a", "b", "a"],
-        ["c", "a", "d"]
-    ])
-);
+// console.log(
+//     countCharacters([
+//         ["a", "b", "a"],
+//         ["c", "a", "d"]
+//     ])
+// );
 // Expected output: { a: 3, b: 1, c: 1, d: 1 }
 // 3. filterDivisibleByThree
 
@@ -71,13 +71,13 @@ function filterDivisibleByThree(arr) {
     return result;
 }
 
-console.log(
-    filterDivisibleByThree([
-        [1, 2, 3],
-        [4, 5, 6],
-        [7, 8, 9]
-    ])
-);
+// console.log(
+//     filterDivisibleByThree([
+//         [1, 2, 3],
+//         [4, 5, 6],
+//         [7, 8, 9]
+//     ])
+// );
 // Expected output: [3, 6, 9]
 
 // 4.findLongestString
@@ -95,13 +95,13 @@ function findLongestString(arr) {
     return longestStr;
 }
 
-console.log(
-    findLongestString([
-        ["apple", "banana"],
-        ["carrot", "date", "eggplant"],
-        ["fig"]
-    ])
-);
+// console.log(
+//     findLongestString([
+//         ["apple", "banana"],
+//         ["carrot", "date", "eggplant"],
+//         ["fig"]
+//     ])
+// );
 // // Expected output: 'eggplant'
 
 // 5. sumArray ?????
@@ -109,7 +109,7 @@ console.log(
 
 // sumArray([1, 2, [3, 4, 5, 6], 7, [8, 9]]);
 // Expected output: 45
-
+//  ????????????????????
 function capitalizeStrings(arrays) {
     let result = [];
 
@@ -128,33 +128,25 @@ function capitalizeStrings(arrays) {
     return result;
 }
 
-console.log(
-    capitalizeStrings([["apple", "banana"], ["carrot", "date"], ["eggplant"]])
-);
+// console.log(
+//     capitalizeStrings([["apple", "banana"], ["carrot", "date"], ["eggplant"]])
+// );
 // Expected output: [['APPLE', 'BANANA'], ['CARROT', 'DATE'], ['EGGPLANT']]
 
 // 6.findMinMaxArrays
 function findMinMaxArrays(arr) {
-    let minNum = arr[0][0];
-    let maxNum = arr[0][0];
+    let minNum = 0;
+    let maxNum = 0;
 
     for (let i = 0; i < arr.length; i++) {
         let subArray = arr[i];
-
-        for (let j = 0; j < subArray.length; j++) {
-            let currentNumber = subArray[j];
-
-            if (currentNumber > maxNum) {
-                maxNum = currentNumber;
-            }
-
-            if (currentNumber < minNum) {
-                minNum = currentNumber;
-            }
+        for (let j = 0; j < subArray.length; i++) {
+            let strs = arr[i][j];
+            console.log(strs);
         }
     }
 
-    return { min: [minNum], max: [maxNum] };
+    // return { min: [minNum], max: [maxNum] };
 }
 
 console.log(
@@ -179,11 +171,11 @@ function mergeNestedArrays(arr) {
     return mergedArr;
 }
 
-console.log(
-    mergeNestedArrays([
-        [1, 2],
-        [3, 4],
-        [5, 6]
-    ])
-);
+// console.log(
+//     mergeNestedArrays([
+//         [1, 2],
+//         [3, 4],
+//         [5, 6]
+//     ])
+// );
 // Expected output: [1, 2, 3, 4, 5, 6]
