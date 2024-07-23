@@ -74,7 +74,7 @@ function checkPrime(num) {
 // console.log(checkPrime(13));
 // // Expected output: true
 
-// 4. primeRange
+// 5. primeRange
 // function primeRange(arr)
 
 // primeRange([10, 20]);
@@ -83,7 +83,7 @@ function checkPrime(num) {
 // primeRange([1, 10]);
 // Expected output: { primes: [2, 3, 5, 7], count: 4 }
 
-// 5. allSubstrings
+// 6. allSubstrings
 
 function allSubstrings(str) {
     let result = [];
